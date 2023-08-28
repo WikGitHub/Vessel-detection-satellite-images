@@ -1,6 +1,8 @@
+# Vessel Detection in Satellite Imagery
+
 ## Project Outline
 
-The following is a broad outline for this project including an MVP (minimum viable product).
+The following is a broad outline for this project. 
 
 ### Phase 0 - Research
 
@@ -8,6 +10,20 @@ The following is a broad outline for this project including an MVP (minimum viab
 - Define the task.
 - Get acquainted with the existing tools and technologies that are available.
 
-Dataset used in the project comes from: https://www.kaggle.com/datasets/rhammell/ships-in-satellite-imagery
+Dataset used in the project comes from: https://www.kaggle.com/datasets/rhammell/ships-in-satellite-imagery. For more information on the dataset, please refer to the [data](./docs/data.md) page.
 
+Task: Binary classification of images into two classes: "ship" and "no-ship".
+
+
+### Phase 1 - Data Collection and Preprocessing
+
+### Phase 2 - Minimum Viable Product (MVP)
+
+The MVP for the project is to create a classification model that classifies images into two classes: "ship" and "no-ship".
+
+### Phase 3 - Model
+
+### Phase 4 - Model Evaluation and Refinement
+
+### Phase 5 - Further Work
 
