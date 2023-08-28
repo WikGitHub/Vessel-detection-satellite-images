@@ -1,4 +1,4 @@
-# Vessel Detection in Satellite Imagery
+# Vessel Detection in Satellite Imagery using PyTorch
 
 ## Project Outline
 
@@ -22,6 +22,11 @@ Task: Binary classification of images into two classes: "ship" and "no-ship".
 The MVP for the project is to create a classification model that classifies images into two classes: "ship" and "no-ship".
 
 ### Phase 3 - Model
+
+Convolutional Neural Network (CNN) 
+
+input --> convolutional layers with filters to extract --> pooling layers for downsampling  --> connected layers for classification
+
 
 ### Phase 4 - Model Evaluation and Refinement
 
