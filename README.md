@@ -14,10 +14,15 @@ Dataset used in the project comes from: https://www.kaggle.com/datasets/rhammell
 
 Task: develop a CNN that is able to perform semantic segmentation of vessels.
 
+Model: possibly VGG, ResNet or a custom architecture.
+
 
 ### Phase 1 - Data Collection and Preprocessing
 
 ### Phase 2 - Minimum Viable Product (MVP)
+
+- Simple CNN architecture with a few convolutional and connected layers.
+- Able to train the CNN on the provided dataset.
 
 ### Phase 3 - Model
 
