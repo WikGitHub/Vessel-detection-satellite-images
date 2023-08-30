@@ -1,6 +1,12 @@
+import os
+
 import torch
 
-dataset_path = 'data/vessel_imgs'
+from common._logging.main import get_logger
+
+_logger = get_logger(__name__)
+dataset_path = "/Users/wiktoria/Desktop/Python Projects/vessel-detection-satellite-images/data/vessel_imgs"
+dataset = os.listdir(dataset_path)
 
 
 def split_dataset(full_dataset: str):
@@ -11,11 +17,14 @@ def split_dataset(full_dataset: str):
     """
 
     train_size = int(0.8 * len(full_dataset))
-    test_size = len(full_dataset) - train_size
-    train_dataset, test_dataset = torch.utils.data.random_split(full_dataset, [train_size, test_size])
+    train_dataset, test_dataset = torch.utils.data.random_split(
+        full_dataset, [train_size, len(full_dataset) - train_size]
+    )
+    _logger.info(f"The training dataset size is {len(train_dataset)}")
+    _logger.info(f"The testing dataset size is {len(test_dataset)}")
 
     return train_dataset, test_dataset
 
 
 if __name__ == "__main__":
-    split_dataset(dataset_path)
+    train_dataset, test_dataset = split_dataset(dataset)
