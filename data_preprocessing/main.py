@@ -1,5 +1,6 @@
 import os
 
+import cv2
 import torch
 
 from common._logging.main import get_logger
@@ -9,7 +10,7 @@ dataset_path = "/Users/wiktoria/Desktop/Python Projects/vessel-detection-satelli
 dataset = os.listdir(dataset_path)
 
 
-def split_dataset(full_dataset: str):
+def split_dataset(full_dataset: list[str]):
     """
     Split the dataset into training and testing sets.
     :param full_dataset: path to the full dataset.
@@ -26,5 +27,21 @@ def split_dataset(full_dataset: str):
     return train_dataset, test_dataset
 
 
+def check_image_size(dataset_path: str):
+    """
+    Check the size of the images in the dataset.
+    :param dataset_path: path to the dataset.
+    :return: log the size of the images in the dataset.
+    """
+    for filename in os.listdir(dataset_path):
+        if filename.endswith(".png"):
+            image_path = os.path.join(dataset_path, filename)
+            img = cv2.imread(image_path)
+            height, width, _ = img.shape
+
+            _logger.info(f"Image {filename} has height {height} and width {width}")
+
+
 if __name__ == "__main__":
     train_dataset, test_dataset = split_dataset(dataset)
+    # check_image_size(dataset_path)
