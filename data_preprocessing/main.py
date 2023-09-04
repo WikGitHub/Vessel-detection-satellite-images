@@ -37,11 +37,11 @@ def check_image_size(dataset_path: str):
         if filename.endswith(".png"):
             image_path = os.path.join(dataset_path, filename)
             img = cv2.imread(image_path)
-            height, width, _ = img.shape
+            height, width, channels = img.shape
 
-            _logger.info(f"Image {filename} has height {height} and width {width}")
+            _logger.info(f"Image {filename} has height {height}, a width of {width} and {channels} channels.")
 
 
 if __name__ == "__main__":
     train_dataset, test_dataset = split_dataset(dataset)
-    # check_image_size(dataset_path)
+    check_image_size(dataset_path)
