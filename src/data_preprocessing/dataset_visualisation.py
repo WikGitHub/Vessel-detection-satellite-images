@@ -3,7 +3,7 @@ import os
 from matplotlib import pyplot as plt
 from matplotlib.image import imread
 
-dataset_path = "/Users/wiktoria/Desktop/Python Projects/vessel-detection-satellite-images/data/vessel_imgs"
+dataset_path = "/data/vessel_imgs"
 dataset = os.listdir(dataset_path)
 
 

@@ -3,10 +3,10 @@ import os
 import cv2
 import torch
 
-from common._logging.main import get_logger
+from src.common._logging.main import get_logger
 
 _logger = get_logger(__name__)
-dataset_path = "/Users/wiktoria/Desktop/Python Projects/vessel-detection-satellite-images/data/vessel_imgs"
+dataset_path = "/data/vessel_imgs"
 dataset = os.listdir(dataset_path)
 
 
