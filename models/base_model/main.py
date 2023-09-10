@@ -34,7 +34,10 @@ class ImageClassificationBase(nn.Module):
         predicted_scores = self(val_images)
         val_loss = F.cross_entropy(predicted_scores, val_labels)
         val_accuracy = accuracy(predicted_scores, val_labels)
-        return {'validation_loss': val_loss.detach(), 'validation_accuracy': val_accuracy}
+        return {
+            "validation_loss": val_loss.detach(),
+            "validation_accuracy": val_accuracy,
+        }
 
     def calculate_average_validation_metrics(self, validation_outputs: list[dict]):
         """
@@ -42,11 +45,14 @@ class ImageClassificationBase(nn.Module):
         :param validation_outputs: List of outputs from validation_step() for each batch.
         :return: A dictionary containing the average validation loss and accuracy for the epoch.
         """
-        batch_losses = [x['validation_loss'] for x in validation_outputs]
+        batch_losses = [x["validation_loss"] for x in validation_outputs]
         epoch_loss = torch.stack(batch_losses).mean()
-        batch_accuracies = [x['validation_accuracy'] for x in validation_outputs]
+        batch_accuracies = [x["validation_accuracy"] for x in validation_outputs]
         epoch_accuracy = torch.stack(batch_accuracies).mean()
-        return {'average_validation_loss': epoch_loss.item(), 'average_validation_accuracy': epoch_accuracy.item()}
+        return {
+            "average_validation_loss": epoch_loss.item(),
+            "average_validation_accuracy": epoch_accuracy.item(),
+        }
 
     def log_epoch_results(self, epoch_number: int, results: dict):
         """
@@ -58,7 +64,8 @@ class ImageClassificationBase(nn.Module):
         _logger.info(
             f"Epoch {epoch_number + 1}: Training loss: {results['training_loss']}, "
             f"Validation loss: {results['average_validation_loss']}, "
-            f"Validation accuracy: {results['average_validation_accuracy']}")
+            f"Validation accuracy: {results['average_validation_accuracy']}"
+        )
 
 
 if __name__ == "__main__":
