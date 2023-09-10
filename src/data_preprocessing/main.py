@@ -6,7 +6,7 @@ import torch
 from src.common._logging.main import get_logger
 
 _logger = get_logger(__name__)
-dataset_path = "/data/vessel_imgs"
+dataset_path = "/Users/wiktoria/Desktop/Python Projects/vessel-detection-satellite-images/data/raw/vessel_imgs"
 dataset = os.listdir(dataset_path)
 
 
