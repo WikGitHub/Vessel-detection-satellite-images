@@ -66,7 +66,3 @@ class ImageClassificationBase(nn.Module):
             f"Validation loss: {results['average_validation_loss']}, "
             f"Validation accuracy: {results['average_validation_accuracy']}"
         )
-
-
-if __name__ == "__main__":
-    pass
