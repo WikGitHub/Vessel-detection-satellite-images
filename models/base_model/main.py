@@ -10,7 +10,7 @@ _logger = get_logger(__name__)
 
 class ImageClassificationBase(nn.Module):
     """
-    Basic template for implementing neural network models for image classification.
+    Basic template for implementing neural network models for image classification. Provides a structure for training and evaluating models.
     """
 
     def calculate_training_loss(self, batch: torch.Tensor):
