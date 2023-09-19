@@ -1,8 +1,5 @@
 # Vessel Detection in Satellite Imagery using PyTorch
 
-[![Build Status](https://img.shields.io/travis/yourusername/yourproject?style=flat-square)](https://travis-ci.org/yourusername/yourproject)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
-
 ## Project Overview
 
 This project aims to develop a Convolutional Neural Network (CNN) for vessel detection in satellite imagery using PyTorch. The goal is to accurately perform semantic segmentation of vessels.
