@@ -34,7 +34,9 @@ The dataset used in this project can be found [here](https://www.kaggle.com/data
 
 ### Phase 1 - Data Collection and Preprocessing
 
-_This phase is under development._
+- Download the dataset.
+- Explore the dataset.
+- Preprocess the data.
 
 ### Phase 2 - Minimum Viable Product (MVP)
 
